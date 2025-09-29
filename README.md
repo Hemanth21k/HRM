@@ -13,6 +13,20 @@ These results underscore HRM’s potential as a transformative advancement towar
 
 ## Quick Start Guide 🚀
 
+### Setting up in Docker
+Simply run:
+```
+docker build -t hrm-model ./HRM
+```
+For running the code (add gpu visibility as well):
+```
+docker run -it --gpus all hrm-model 
+```
+For development inside docker please add the volume to save checkpoints and edit code (```-it``` opens up interactive terminal and ```-v``` adds volume):
+```
+docker run -it --gpus all -v ./HRM:/workspace/HRM hrm-model
+```
+
 ### Prerequisites ⚙️
 
 Ensure PyTorch and CUDA are installed. The repo needs CUDA extensions to be built. If not present, run the following commands:
